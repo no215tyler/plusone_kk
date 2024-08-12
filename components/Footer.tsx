@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <Box component='footer' flexGrow={0}>
       <div className={classes.footer}>
-        ©Plus One Co., Ltd.
+        <span className={classes.copyright} >©</span><img src='plusone_logos/Plus-One-CoLtd_bgwhite_text.jpg' alt='Plus One Co., Ltd.' className={classes.footer_logo} />
       </div>
     </Box>
   )
