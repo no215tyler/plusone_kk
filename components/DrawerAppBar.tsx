@@ -67,10 +67,10 @@ export default function DrawerAppBar(props: Props) {
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, mt: 1 }}
           >
             <Link href={"/"}>
-              <img src='plusone_logos/Plus-One_logo2.png' alt='logo' />
+              <img src='plusone_logos/Plus-One_logo2.png' alt='logo' width={"50px"} height={"50px"} />
             </Link>
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
