@@ -14,6 +14,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Link from 'next/link';
+import classes from '../styles/Home.module.css';
 
 interface Props {
   window?: () => Window;
@@ -102,6 +103,7 @@ export default function DrawerAppBar(props: Props) {
       <Box component="main" sx={{ p: 3 }}>
         <Toolbar />
         <Typography>
+          <h1 className={classes.header_title}>大切な住まいの点検・管理〝住宅診断〟承ります</h1>
         </Typography>
       </Box>
     </Box>
