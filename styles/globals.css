@@ -8,3 +8,11 @@ a {
   text-decoration: none;
   color: #ffffff;
 }
+
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh);
+}
