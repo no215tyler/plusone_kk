@@ -3,6 +3,7 @@ import DrawerAppBar from '../components/DrawerAppBar'
 import Footer from '../components/Footer'
 import Head from 'next/head'
 import styles from "@/styles/Home.module.css";
+import classes from '../components/About.module.css';
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,6 +20,68 @@ export default function About() {
       <main className={`${styles.main} ${inter.className}`}>
         <DrawerAppBar />
         <img src="hero_image3.jpg" alt="" className={styles.hero_img} />
+        <div className={classes.container}>
+          <h3 className={classes.table_title}>会社概要</h3>
+          <table className={classes.table}>
+            <tr>
+              <td>会社名</td>
+              <td>Plus One株式会社</td>
+            </tr>
+            <tr>
+              <td>住所</td>
+              <td>〒371-0224<br/>群馬県前橋市河原浜町705-9</td>
+            </tr>
+            <tr>
+              <td>TEL</td>
+              <td>027-212-8093</td>
+            </tr>
+            <tr>
+              <td>FAX</td>
+              <td>027-212-8049</td>
+            </tr>
+            <tr>
+              <td>MOBILE</td>
+              <td>000-0000-0000</td>
+            </tr>
+            <tr>
+              <td>MAIL</td>
+              <td>t.plus-one@outlook.com</td>
+            </tr>
+            <tr>
+              <td>代表取締役</td>
+              <td>平 博隆</td>
+            </tr>
+            <tr>
+              <td>資本金</td>
+              <td>****円</td>
+            </tr>
+            <tr>
+              <td>創業</td>
+              <td>****年</td>
+            </tr>
+            <tr>
+              <td>主な事業内容</td>
+              <td>
+                建築工事業<br/>
+                内装仕上工事業
+                <ul>
+                  <li>一般リフォーム請負工事</li>
+                  <li>住宅・店舗建築全般</li>
+                  <li>現場管理</li>
+                  <li>メンテナンス業務</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>免許登録</td>
+              <td>
+                二級建築士<br/>
+                2級建築施工管理技士<br/>
+                一般建設業 / 群馬県知事 許可 (般-1) 第25281号
+              </td>
+            </tr>          
+          </table>
+        </div>
         <Footer />
       </main>   
     </>
