@@ -103,7 +103,7 @@ export default function DrawerAppBar(props: Props) {
       <Box component="main" sx={{ p: 3 }}>
         <Toolbar />
         <Typography>
-          <h1 className={classes.header_title}>大切な住まいの点検・管理〝住宅診断〟承ります</h1>
+          <p className={classes.header_title}>大切な住まいの点検・管理〝住宅診断〟承ります</p>
         </Typography>
       </Box>
     </Box>

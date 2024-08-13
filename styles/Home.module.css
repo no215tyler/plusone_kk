@@ -21,6 +21,7 @@
 
 .header_title {
   font-family: "Noto Serif JP", serif;
+  font-size: xx-large;
   font-weight: bold;
   font-style: italic;
   text-align: center;
@@ -38,7 +39,7 @@
   }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 648px) {
   .header_title {
     font-size: small;
   }
