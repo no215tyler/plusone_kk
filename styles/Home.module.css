@@ -33,6 +33,15 @@
   color: rgb(50, 50, 50);
 }
 
+.sidebar_button {
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar_text {
+  color: #000000;
+}
+
 @media (max-width: 1024px) {
   .header_title {
     font-size: x-large;

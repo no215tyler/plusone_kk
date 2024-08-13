@@ -21,7 +21,12 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+// const navItems = ['Home', 'About', 'Contact'];
+const navItems: {label: string, href: string}[] = [
+  {label: 'Home', href: '/'}, 
+  {label: 'About', href: '/about'}, 
+  {label: 'Contact', href: '/contact'}
+];
 
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
@@ -38,10 +43,12 @@ export default function DrawerAppBar(props: Props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
+        {navItems.map((item, index) => (
+          <ListItem key={index} disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }} className={classes.sidebar_button} >
+              <Link href={item.href}>
+                <ListItemText primary={item.label} className={classes.sidebar_text} />
+              </Link>
             </ListItemButton>
           </ListItem>
         ))}
@@ -75,9 +82,9 @@ export default function DrawerAppBar(props: Props) {
             </Link>
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
+            {navItems.map((item, index) => (
+              <Button key={index} sx={{ color: '#fff' }}>
+                {item.label}
               </Button>
             ))}
           </Box>
@@ -103,7 +110,7 @@ export default function DrawerAppBar(props: Props) {
       <Box component="main" sx={{ p: 3 }}>
         <Toolbar />
         <Typography>
-          <p className={classes.header_title}>大切な住まいの点検・管理〝住宅診断〟承ります</p>
+          <span className={classes.header_title}>大切な住まいの点検・管理〝住宅診断〟承ります</span>
         </Typography>
       </Box>
     </Box>
