@@ -15,13 +15,13 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Link from 'next/link';
 import classes from '../styles/Home.module.css';
+import { useRouter } from 'next/router';
 
 interface Props {
   window?: () => Window;
 }
 
 const drawerWidth = 240;
-// const navItems = ['Home', 'About', 'Contact'];
 const navItems: {label: string, href: string}[] = [
   {label: 'Home', href: '/'}, 
   {label: 'About', href: '/about'}, 
@@ -31,6 +31,16 @@ const navItems: {label: string, href: string}[] = [
 export default function DrawerAppBar(props: Props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const router = useRouter();
+  let headerTitle;
+  if (router.pathname === '/' ) {
+    headerTitle = (
+      <span className={classes.header_title}>
+        大切な住まいの点検・管理〝住宅診断〟承ります
+      </span>
+    );
+  }
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -46,7 +56,7 @@ export default function DrawerAppBar(props: Props) {
         {navItems.map((item, index) => (
           <ListItem key={index} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }} className={classes.sidebar_button} >
-              <Link href={item.href}>
+              <Link key={index} href={item.href}>
                 <ListItemText primary={item.label} className={classes.sidebar_text} />
               </Link>
             </ListItemButton>
@@ -83,9 +93,11 @@ export default function DrawerAppBar(props: Props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item, index) => (
-              <Button key={index} sx={{ color: '#fff' }}>
-                {item.label}
-              </Button>
+              <Link key={index} href={item.href}>
+                <Button key={index} sx={{ color: '#fff' }}>
+                  {item.label}
+                </Button>
+              </Link>
             ))}
           </Box>
         </Toolbar>
@@ -110,7 +122,7 @@ export default function DrawerAppBar(props: Props) {
       <Box component="main" sx={{ p: 3 }}>
         <Toolbar />
         <Typography>
-          <span className={classes.header_title}>大切な住まいの点検・管理〝住宅診断〟承ります</span>
+          {headerTitle}
         </Typography>
       </Box>
     </Box>
