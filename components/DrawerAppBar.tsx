@@ -49,7 +49,9 @@ export default function DrawerAppBar(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        <img src='plusone_logos/Plus-One_logo.png' className={classes.side_menu} />
+        <Link href={'/'} >
+          <img src='plusone_logos/Plus-One_logo.png' className={classes.side_menu} />
+        </Link>
       </Typography>
       <Divider />
       <List>
