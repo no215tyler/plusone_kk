@@ -1,6 +1,28 @@
 .container {
+  margin-top: 180px;
+  width: 785px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.message {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #EAEAEA;
+  border: thick double #000000;
+  padding: 8px;
+  margin: 8px auto;
+  text-wrap: stable;
+  position: relative;
+}
+
+.signature {
   position: absolute;
-  top: 96px;
+  right: 12px;
+  bottom: 8px;
 }
 
 .table_title {
@@ -28,16 +50,19 @@
   font-size: small;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 785px) {
+  .container {
+    width: 60vw;
+  }
 }
 
 @media (max-width: 648px) {
-  .table td {
+  .table td, .message {
     font-size: 0.75em;
     padding: 8px 12px;
   }
 
-  .table ul {
+  .table ul, .signature {
     font-size: x-small;
   }
 }
