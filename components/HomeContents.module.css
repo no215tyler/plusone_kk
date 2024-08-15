@@ -18,45 +18,18 @@
 
 .content1 {
   grid-area: area1;
-  padding: 16px ;
-  margin: 8px;
-  background-color: #FFFFFF;
-  height: 90%;
-  width: 90%;
-  font-weight: bold;
-  border: solid 2px #22a9c7;
-  border-radius: 5px;
-  display: grid;
-  place-content: end center;
 }
 .content2 {
   grid-area: area2;
-  padding: 16px ;
-  margin: 8px;
-  background-color: #FFFFFF;
-  height: 90%;
-  width: 90%;
-  font-weight: bold;
-  border: solid 2px #22a9c7;
-  border-radius: 5px;
-  display: grid;
-  place-content: end center;
 }
 .content3 {
   grid-area: area3;
-  padding: 16px ;
-  margin: 8px;
-  background-color: #FFFFFF;
-  height: 90%;
-  width: 90%;
-  font-weight: bold;
-  border: solid 2px #22a9c7;
-  border-radius: 5px;
-  display: grid;
-  place-content: end center;
 }
 .content4 {
   grid-area: area4;
+}
+
+.content1, .content2, .content3, .content4 {
   padding: 16px ;
   margin: 8px;
   background-color: #FFFFFF;
