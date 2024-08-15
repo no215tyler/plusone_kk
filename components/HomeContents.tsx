@@ -6,8 +6,10 @@ const HomeContents = () => {
     <div className={classes.home_contents}>
       <div className={classes.content1}>
           <img src='/Renovation.png' alt='icon' className={classes.content_icon} />
-        <span className={classes.br}>住宅内装</span>
-        <span className={classes.br}>リフォーム工事</span>
+        <div>
+          <span className={classes.br}>住宅内装</span>
+          <span className={classes.br}>リフォーム工事</span>
+        </div>
       </div>
       <div className={classes.content2}>
         <img src='/Renovation2.png' alt='icon' className={classes.content_icon} />
