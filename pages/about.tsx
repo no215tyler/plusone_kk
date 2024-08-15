@@ -19,7 +19,6 @@ export default function About() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <DrawerAppBar />
-        {/* <img src="hero_image3.jpg" alt="" className={styles.hero_img} /> */}
         <div className={classes.container}>
           <h3 className={classes.table_title}>代表挨拶</h3>
           <div className={classes.message}>

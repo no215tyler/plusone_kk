@@ -18,7 +18,6 @@ export default function contact() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <DrawerAppBar />
-        {/* <img src="hero_image3.jpg" alt="" className={styles.hero_img} /> */}
         <Footer />
       </main>   
     </>
