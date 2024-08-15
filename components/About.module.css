@@ -52,7 +52,7 @@
 
 @media (max-width: 785px) {
   .container {
-    width: 60vw;
+    width: 80vw;
   }
 }
 
@@ -64,5 +64,6 @@
 
   .table ul, .signature {
     font-size: x-small;
+    padding-right: 4px;
   }
 }
