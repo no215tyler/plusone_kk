@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import DrawerAppBar from "@/components/DrawerAppBar";
 import Footer from "@/components/Footer";
+import HomeContents from "@/components/HomeContents";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,7 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <DrawerAppBar />
-
+        <HomeContents />
         <Footer />
       </main>
     </>
