@@ -44,6 +44,7 @@
 @media(max-width: 648px) {
   .home_contents {
     font-size: small;
+    margin: 8px;
   }
 
   .content_icon {

@@ -67,3 +67,9 @@
     padding-right: 4px;
   }
 }
+
+@media (max-width: 320px) {
+  .container {
+    margin-top: 250px;
+  }
+}
