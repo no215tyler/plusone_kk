@@ -12,6 +12,10 @@ const ContactForm = () => {
 
   const onSendMessage = async (e: any) => {
     e.preventDefault();
+    if (!name || !email || !message) {
+      alert("入力項目に不備があります。");
+      return;
+    }
     setIsLoading(true);
     setIsModalOpen(true);
     const failedMessage =
