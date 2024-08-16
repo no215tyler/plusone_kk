@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap");
+.body {
+  margin: 16px;
+  background-color: rgba(24, 118, 209, 0.7);
+  padding-bottom: 100px;
+  border-radius: 5px;
+  width: min(680px, 80vw);
+  height: min(700px, 80vh);
+}
+
+.contact {
+  width: 100%;
+  height: 100%;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 10px;
+  font: bold 40px "Oswald", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.contactWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
+}
+
+/* Left contact page */
+.formHorizontal {
+  /* float: left; */
+  max-width: 100%;
+  font-family: "Lato";
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.formControl,
+.textarea {
+  width: 100%;
+  background-color: #eaeaea;
+  color: #000000;
+  letter-spacing: 1px;
+  padding: 4px;
+  margin: 4px;
+  border: none;
+}
+
+.textarea {
+  height: min(400px, 40vh);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: start;
+}
+
+.sendButton {
+  margin-top: 15px;
+  height: 34px;
+  width: 300px;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  background-color: #1876d1;
+  color: #ffffff;
+  border-radius: 3px;
+}
+
+.sendButton:hover {
+  background-color: #025ab1;
+}
+
+/* Location, Phone, Email Section */
+.contactList {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
+
+.listItem {
+  line-height: 4;
+  color: #aaa;
+}
+
+.contactText {
+  font: 300 18px "Lato", sans-serif;
+  letter-spacing: 1.9px;
+  color: #bbb;
+}
+
+.contactText a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contactText a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Begin Media Queries*/
+@media screen and (max-width: 850px) {
+  .contactWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .sectionHeader {
+    font-size: xx-large;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .sectionHeader {
+    font-size: x-large;
+  }
+  .sendButton {
+    width: 99%;
+  }
+}

@@ -5,7 +5,7 @@ import React from "react";
 import styles from "@/styles/Home.module.css";
 import { Inter } from "next/font/google";
 import OGP from "@/components/OGP";
-
+import ContactForm from "@/components/ContactForm";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function contact() {
@@ -20,6 +20,7 @@ export default function contact() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <DrawerAppBar />
+        <ContactForm />
         <Footer />
       </main>
     </>
