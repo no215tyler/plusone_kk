@@ -1,7 +1,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import { CircularProgress } from "@mui/material";
+import { CircularProgress, Typography } from "@mui/material";
 
 const style = {
   position: "absolute" as "absolute",
@@ -19,11 +19,18 @@ const style = {
 interface BasicModalProps {
   open: boolean;
   handleClose: () => void;
+  isLoading: boolean;
+  message: string;
 }
 
-const BasicModal: React.FC<BasicModalProps> = ({ open, handleClose }) => {
+const BasicModal: React.FC<BasicModalProps> = ({
+  open,
+  handleClose,
+  isLoading,
+  message,
+}: any) => {
   return (
-    <div>
+    <>
       <Modal
         open={open}
         onClose={handleClose}
@@ -31,10 +38,18 @@ const BasicModal: React.FC<BasicModalProps> = ({ open, handleClose }) => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <CircularProgress />
+          {isLoading ? (
+            <CircularProgress />
+          ) : (
+            <>
+              <Typography id="modal-modal-title" variant="h6" component="h2">
+                {message}
+              </Typography>
+            </>
+          )}
         </Box>
       </Modal>
-    </div>
+    </>
   );
 };
 

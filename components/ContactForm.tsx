@@ -7,9 +7,12 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
 
   const onSendMessage = async (e: any) => {
     e.preventDefault();
+    setIsLoading(true);
     setIsModalOpen(true);
     const failedMessage =
       "メッセージの送信に失敗しました。問い合わせ先にご連絡ください。（代表）027-212-8093";
@@ -28,23 +31,33 @@ const ContactForm = () => {
       });
 
       if (response.ok) {
-        alert("メッセージが送信されました。");
+        setModalMessage("メッセージが送信されました。");
         setName("");
         setEmail("");
         setMessage("");
       } else {
-        alert(failedMessage);
+        setModalMessage(failedMessage);
       }
     } catch (error) {
       console.log("エラーが発生しました", error);
-      alert(failedMessage);
+      setModalMessage(failedMessage);
     } finally {
-      setIsModalOpen(false);
+      setIsLoading(false);
     }
+  };
+
+  const handleClose = () => {
+    setIsModalOpen(false);
   };
 
   return (
     <div className={classes.body}>
+      <BasicModal
+        open={isModalOpen}
+        handleClose={handleClose}
+        isLoading={isLoading}
+        message={modalMessage}
+      />
       <section id="contact">
         <h1 className={classes.sectionHeader}>お問い合わせ</h1>
         <div className={classes.contactWrapper}>
@@ -89,10 +102,6 @@ const ContactForm = () => {
           </form>
         </div>
       </section>
-      <BasicModal
-        open={isModalOpen}
-        handleClose={() => setIsModalOpen(false)}
-      />
     </div>
   );
 };
