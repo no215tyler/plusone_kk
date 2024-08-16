@@ -6,12 +6,37 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const onSendMessage = (e: any) => {
+  const onSendMessage = async (e: any) => {
     e.preventDefault();
-    setName("");
-    setEmail("");
-    setMessage("");
     console.log(`${name} / ${email} / ${message}`);
+    const failedMessage =
+      "メッセージの送信に失敗しました。問い合わせ先にご連絡ください。（代表）027-212-8093";
+
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+        }),
+      });
+
+      if (response.ok) {
+        alert("メッセージが送信されました。");
+        setName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        alert(failedMessage);
+      }
+    } catch (error) {
+      console.log("エラーが発生しました", error);
+      alert(failedMessage);
+    }
   };
 
   return (
