@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import classes from "./ContactForm.module.css";
+import BasicModal from "./BasicModal";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const onSendMessage = async (e: any) => {
     e.preventDefault();
-    console.log(`${name} / ${email} / ${message}`);
+    setIsModalOpen(true);
     const failedMessage =
       "メッセージの送信に失敗しました。問い合わせ先にご連絡ください。（代表）027-212-8093";
 
@@ -36,6 +38,8 @@ const ContactForm = () => {
     } catch (error) {
       console.log("エラーが発生しました", error);
       alert(failedMessage);
+    } finally {
+      setIsModalOpen(false);
     }
   };
 
@@ -85,6 +89,10 @@ const ContactForm = () => {
           </form>
         </div>
       </section>
+      <BasicModal
+        open={isModalOpen}
+        handleClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 };
