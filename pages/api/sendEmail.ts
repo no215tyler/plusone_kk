@@ -20,7 +20,7 @@ export default async function handler(
       from: email,
       to: process.env.NEXT_PUBLIC_ENV_TO_MAIL, // 送信先のメールアドレス
       subject: `お問い合わせ from ${name}`,
-      text: message,
+      text: `${message} \n\n━━━━━━━━━━━━━━━━━━━━━\n ■ お客さま返信先 Email: ${email}\n━━━━━━━━━━━━━━━━━━━━━`,
     };
 
     try {
