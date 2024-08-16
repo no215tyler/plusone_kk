@@ -11,14 +11,14 @@ export default async function handler(
     const transporter = nodemailer.createTransport({
       service: "Gmail", // Gmailを使用
       auth: {
-        user: process.env.NEXT_PUBLIC_ENV_GMAIL,
-        pass: process.env.NEXT_PUBLIC_ENV_GMAIL_PW,
+        user: process.env.ENV_GMAIL,
+        pass: process.env.ENV_GMAIL_PW,
       },
     });
 
     const mailOptions = {
       from: email,
-      to: process.env.NEXT_PUBLIC_ENV_TO_MAIL, // 送信先のメールアドレス
+      to: process.env.ENV_TO_MAIL, // 送信先のメールアドレス
       subject: `お問い合わせ from ${name}`,
       text: `${message} \n\n━━━━━━━━━━━━━━━━━━━━━\n ■ お客さま返信先 Email: ${email}\n━━━━━━━━━━━━━━━━━━━━━`,
     };
