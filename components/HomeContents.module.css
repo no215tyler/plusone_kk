@@ -10,11 +10,14 @@
   align-items: stretch;
 }
 
-.content1, .content2, .content3, .content4 {
+.content1,
+.content2,
+.content3,
+.content4 {
   flex: 0 1 calc(50% - 16px);
   box-sizing: border-box;
   margin: 8px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   font-weight: bold;
   border: solid 2px #22a9c7;
   border-radius: 5px;
@@ -34,14 +37,14 @@
   max-height: 150px;
 }
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
   .home_contents {
     width: 80%;
     place-content: center center;
   }
 }
 
-@media(max-width: 648px) {
+@media (max-width: 648px) {
   .home_contents {
     font-size: small;
     margin: 8px;

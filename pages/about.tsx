@@ -1,11 +1,11 @@
-import React from 'react'
-import DrawerAppBar from '../components/DrawerAppBar'
-import Footer from '../components/Footer'
-import Head from 'next/head'
+import React from "react";
+import DrawerAppBar from "../components/DrawerAppBar";
+import Footer from "../components/Footer";
+import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import classes from '../components/About.module.css';
-import { Inter } from 'next/font/google'
-import OGP from '@/components/OGP';
+import classes from "../components/About.module.css";
+import { Inter } from "next/font/google";
+import OGP from "@/components/OGP";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,12 +24,17 @@ export default function About() {
         <div className={classes.container}>
           <h3 className={classes.table_title}>代表挨拶</h3>
           <div className={classes.message}>
-            現在、建築・内装工事全般を軸に一般リフォーム請負工事や住宅、店舗建築、現場管理やメンテナンス業務など様々な分野で活動を行っております。<br/>
-            培った技術で創意工夫を追求し、安心・安全に基づいた価値を提供できるよう日々精進しております。<br/>
-            ひとと人との出会いから、心の通うコミュニケーションを大切に末永いお付き合いを心がけております。<br/>
-            <br/>
-            <br/>
-            <span className={classes.signature}>Plus One株式会社　代表取締役 平 博隆</span>
+            現在、建築・内装工事全般を軸に一般リフォーム請負工事や住宅、店舗建築、現場管理やメンテナンス業務など様々な分野で活動を行っております。
+            <br />
+            培った技術で創意工夫を追求し、安心・安全に基づいた価値を提供できるよう日々精進しております。
+            <br />
+            ひとと人との出会いから、心の通うコミュニケーションを大切に末永いお付き合いを心がけております。
+            <br />
+            <br />
+            <br />
+            <span className={classes.signature}>
+              Plus One株式会社　代表取締役 平 博隆
+            </span>
           </div>
 
           <h3 className={classes.table_title}>会社概要</h3>
@@ -40,7 +45,11 @@ export default function About() {
             </tr>
             <tr>
               <td>住所</td>
-              <td>〒371-0224<br/>群馬県前橋市河原浜町705-9</td>
+              <td>
+                〒371-0224
+                <br />
+                群馬県前橋市河原浜町705-9
+              </td>
             </tr>
             <tr>
               <td>TEL</td>
@@ -73,7 +82,8 @@ export default function About() {
             <tr>
               <td>主な事業内容</td>
               <td>
-                建築工事業<br/>
+                建築工事業
+                <br />
                 内装仕上工事業
                 <ul>
                   <li>一般リフォーム請負工事</li>
@@ -86,15 +96,17 @@ export default function About() {
             <tr>
               <td>免許登録</td>
               <td>
-                二級建築士<br/>
-                2級建築施工管理技士<br/>
+                二級建築士
+                <br />
+                2級建築施工管理技士
+                <br />
                 一般建設業 / 群馬県知事 許可 (般-1) 第25281号
               </td>
-            </tr>          
+            </tr>
           </table>
         </div>
         <Footer />
-      </main>   
+      </main>
     </>
-  )
+  );
 }
