@@ -1,10 +1,10 @@
-import DrawerAppBar from '@/components/DrawerAppBar'
-import Footer from '@/components/Footer'
-import Head from 'next/head'
-import React from 'react'
+import DrawerAppBar from "@/components/DrawerAppBar";
+import Footer from "@/components/Footer";
+import Head from "next/head";
+import React from "react";
 import styles from "@/styles/Home.module.css";
-import { Inter } from 'next/font/google'
-import OGP from '@/components/OGP';
+import { Inter } from "next/font/google";
+import OGP from "@/components/OGP";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +21,7 @@ export default function contact() {
       <main className={`${styles.main} ${inter.className}`}>
         <DrawerAppBar />
         <Footer />
-      </main>   
+      </main>
     </>
-  )
+  );
 }
