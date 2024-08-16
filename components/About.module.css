@@ -11,7 +11,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   border: thick double #000000;
   padding: 8px;
   margin: 8px auto;
@@ -26,8 +26,8 @@
 }
 
 .table_title {
-  background-color: #1876D1;
-  color: #FFFFFF;
+  background-color: #1876d1;
+  color: #ffffff;
   padding: 8px 80px;
   margin: 8px 0;
   text-align: center;
@@ -35,14 +35,14 @@
 
 .table {
   border: solid 1px #000000;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   margin: 8px 0;
 }
 
 .table td {
   border: solid 1px #000000;
   padding: 8px 16px;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
 }
 
 .table ul {
@@ -57,12 +57,14 @@
 }
 
 @media (max-width: 648px) {
-  .table td, .message {
+  .table td,
+  .message {
     font-size: 0.75em;
     padding: 8px 12px;
   }
 
-  .table ul, .signature {
+  .table ul,
+  .signature {
     font-size: x-small;
     padding-right: 4px;
   }
