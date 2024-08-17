@@ -61,7 +61,7 @@ export default function About() {
             </tr>
             <tr>
               <td>MOBILE</td>
-              <td>000-0000-0000</td>
+              <td>070-4128-6043</td>
             </tr>
             <tr>
               <td>MAIL</td>
@@ -73,11 +73,11 @@ export default function About() {
             </tr>
             <tr>
               <td>資本金</td>
-              <td>****円</td>
+              <td>3,000,000円</td>
             </tr>
             <tr>
-              <td>創業</td>
-              <td>****年</td>
+              <td>設立</td>
+              <td>2016年7月</td>
             </tr>
             <tr>
               <td>主な事業内容</td>
